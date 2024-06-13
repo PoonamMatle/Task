@@ -1,0 +1,17 @@
+<div class="container">
+    <h3 class="container text-center">Product Component Information</h3>
+    <table align="center" class="table table-bordered p-3 w-50 bg-warning text-white  text-center">
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Qty</th>
+        </tr>
+        <tr *ngFor="let i of prodobj">
+            <td>{{i.id}}</td>
+            <td>{{i.name}}</td>
+            <td>{{i.price}}</td>
+            <td>{{i.Qty}}</td>
+        </tr>
+    </table>
+</div>

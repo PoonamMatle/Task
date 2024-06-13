@@ -1,0 +1,22 @@
+<!-- <h1>This is Student Component</h1>
+<p>{{student.id}}</p>
+<p>{{student.name}}</p>
+<p>{{student.age}}</p>
+<p>{{student.city}}</p> -->
+
+<div class="container text-center">
+    <h3 class="text-info">Student Component Information</h3>
+    <br>
+    <table align="center" class="table table-bordered p-3 w-50 bg-info text-white">
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>City</th>
+        </tr>
+        <tr *ngFor="let i of studobj">
+            <td>{{i.id}}</td>
+            <td>{{i.name}}</td>
+            <td>{{i.city}}</td>
+        </tr>
+    </table>
+</div>

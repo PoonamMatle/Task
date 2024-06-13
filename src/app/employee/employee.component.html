@@ -1,0 +1,46 @@
+<!-- <h1 class="container text-center">App Component</h1>
+<div class="container bg-info" *ngFor="let i of employee_info" >
+<p class="text-white">{{i.empno}} {{i.ename}} {{i.city}} {{i.job}}</p>
+</div>
+
+<div class="container">
+
+    <table class="table table-bordered w-75 p-5" style="margin:auto">
+
+        <tr>
+<th>Employee No</th>
+<th>Employee Name</th>
+<th>Employee City</th>
+<th>Employee Job</th>
+
+
+        </tr>
+<tr class="container p-3 my-3 bg-primary text-white" *ngFor="let emp of employee_info">
+    <td>{{emp.empno}}</td>
+    <td>{{emp.ename}}</td>
+    <td>{{emp.city}}</td>
+    <td>{{emp.job}}</td>
+
+
+
+</tr>
+    </table>
+</div> -->
+<div class="container-fluid">
+<h3 class="container text-center">Employee Component Information</h3>
+<table align="center" class="table table-bordered p-3 w-50 bg-success text-white  text-center">
+    <tr>
+        <th>EmpNo</th>
+        <th>EName</th>
+        <th>City</th>
+        <th>Job</th>
+
+    </tr>
+    <tr *ngFor="let i of empobj">
+        <td>{{i.empno}}</td>
+        <td>{{i.ename}}</td>
+        <td>{{i.city}}</td>
+        <td>{{i.job}}</td>
+    </tr>
+</table>
+</div>

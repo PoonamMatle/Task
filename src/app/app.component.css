@@ -1,0 +1,24 @@
+h1{
+
+    color: aqua;
+    background-color: azure;
+    text-align: center;
+    font-family: monospace;
+}
+p{
+
+    color: lightcoral;
+    /* text-align: center; */
+    font-weight: bold;
+    font-size: 30px;
+    
+}
+.c1{
+
+    text-decoration: underline;
+    text-indent: 100px;
+    text-shadow: 10px 10px 2px 2px;
+    color:pink;
+    font-weight: 300;
+    font-style: italic;
+}

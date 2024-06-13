@@ -1,0 +1,16 @@
+h1{
+
+    color: aqua;
+    font-family: monospace;
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-color: violet;
+}
+p{
+
+    text-align: center;
+    background-color: rgb(124, 155, 156);
+    color: lightpink;
+ 
+   
+}

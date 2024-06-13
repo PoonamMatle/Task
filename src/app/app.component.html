@@ -1,0 +1,160 @@
+<!-- <app-employee></app-employee> -->
+<!-- <h1 [ngClass]="'c1'" >App Componet</h1> -->
+<!-- 
+
+<div class="container">
+    <p [ngStyle]="{'color':'red','font-size':'20px','border':'2px dotted black'}">{{msg}}</p>
+
+
+<hr>
+<p [ngClass]="'c1'">NgClass Example</p>
+********************NGIF****************
+<p *ngIf="show;else notshow">Hello Poonam</p>
+
+<ng-template #notshow>
+<p>Welcome to Pune</p>
+
+</ng-template>
+<hr>
+*******************NGFOR****************
+<ul *ngFor="let i of  employee_info">
+    <li *ngIf="i.age>=25"  [ngStyle]="{'color':'purple'}" [ngClass]="'c1'">{{i.empno}} {{i.ename}} {{i.city}} {{i.job}} {{i.age}}</li>
+</ul>
+<hr>
+
+<ul *ngFor="let k of  employee_info">
+    <li *ngIf="k.city=='pune'"  [ngStyle]="{'color':'purple'}" [ngClass]="'c1'">{{k.empno}} {{k.ename}} {{k.city}} {{k.job}} {{k.age}}</li>
+</ul>
+
+<hr>
+<ul *ngFor="let i of employee_info">
+    <li [ngClass]="{'text-danger':i.city=='pune',
+                    'text-success':i.city=='mumbai',
+                    'text-warning':i.city=='nashik'
+                    }">{{i.ename}} {{i.city}}</li>
+
+</ul>
+
+</div> -->
+<!-- *********************PropertyBinding********************
+<div class="container">
+    <ul *ngFor="let i of employee_info" [ngSwitch]="i.city">
+        <li *ngSwitchCase="'US'" class="text-success">{{i.ename}} {{i.city}}</li>
+        <li *ngSwitchCase="'pune'" class="text-primary">{{i.ename}} {{i.city}}</li>
+        <li *ngSwitchCase="'mumbai'" class="text-info">{{i.ename}} {{i.city}}</li>
+        <li *ngSwitchDefault class="text-danger">{{i.ename}} {{i.city}}</li>
+
+
+    </ul>
+</div>
+    <hr>
+<p>Property Binding</p>
+<h3 [innerHTML]="msg"></h3>
+
+<input type="text" [value]="msg1">
+<br><br>
+
+<img [src]="imgPath" width="300px" height="150px"> -->
+
+<!-- <h3 [ngClass]="'c1'">Event Binding</h3>
+<div class="container">
+    <button class="btn btn-success" (click)="fun()">Click me</button>
+    <p>{{msg}}</p>
+    <button class="btn btn-success" (click)="fun1()">Click me out</button>
+    <hr>
+    <h4 class="container text-primary" [ngClass]="'c1'">To get value from textbox</h4>
+    
+    <input type="text" #t1><br><br>
+    <p>TextBox Value:{{msg}}</p>
+    <button class="btn btn-warning" (click)="getVal(t1.value)">get textbox value</button>
+    <hr>
+<h4 class="container text-primary" [ngClass]="'c1'">Toggle Effect</h4>
+<p>Toggle Effect:-{{greet}}</p>
+<button   class="btn btn-success"(click)="toggle()">Toggle Effect</button>
+<hr>
+<h4 class="container text-primary" [ngClass]="'c1'">Calculator</h4>
+<table>
+    <tr>
+        <td>Enter First Number</td>
+        <td>
+            <input type="number" #t3>
+        </td>
+    </tr>
+    <tr>
+        <td>Enter Second Number</td>
+        <td>
+            <input type="number" #t4>
+        </td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>
+            <button class="btn btn-success" (click)="add(t3.value,t4.value)">Show Addition</button>
+        </td>
+    </tr>
+    <p>Addition is:-{{result}}</p>
+</table>
+</div> -->
+<!-- *******************Model class + Routing ****************** -->
+<!-- <div class="container">
+    <h1>Routing Example</h1>
+    <a [routerLink]="['/home']">Home</a>.........
+    <a [routerLink]="['/about']">About</a>.......
+    <a [routerLink]="['/contact']">Contact</a>.....
+    <a [routerLink]="['/help']">Help</a>.......
+    <a [routerLink]="['/student1']">Student1</a>
+    
+    <br>
+    <button class="btn btn-success" (click)="load()">Load Route</button>
+    <router-outlet></router-outlet>
+</div>
+<hr>
+<app-acomp></app-acomp> -->
+<!-- **********Routing + Services*********** -->
+<div class="container">
+    
+    <div class="container">
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+            <div class="container-fluid">
+
+              <a class="navbar-brand" href="#">Navbar</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                  <li class="nav-item">
+
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    
+                    <a class="nav-link" [routerLink]="['/student']">Student</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['/employee']">Employee</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['/product']">Product</a>
+                  </li>
+                  
+                  
+                </ul>
+                <form class="d-flex">
+
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+              </div>
+            </div>
+          </nav>
+
+    </div>
+    <router-outlet></router-outlet>
+</div>
+<hr>
+<app-pipe-example></app-pipe-example>

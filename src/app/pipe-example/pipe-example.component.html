@@ -1,0 +1,30 @@
+<div class="container">
+    <p class="container bg-warning text-center display-5" >Pipe-Example</p>
+    <hr>
+    <h2>Title :- {{title | uppercase}}</h2>
+    <h2>LowerCase Title :- {{title | lowercase}}</h2>
+    <h2>TitleCase :- {{title|titlecase}}</h2>
+    <h2>Current Date :- {{today_date | date:'M-d-y'}}</h2>
+    <h2>Month Name :- {{months | slice:1:9}}</h2>
+    <h2>Json Val :- {{jsonVal | json}}</h2>
+    <h2>Currency Pipe :- {{23456 |currency:'INR'}}</h2>
+    <hr>
+    <P class="text-center text-primary display-5">UserDefined Pipe</P>
+    <h2>Power of Even numbers:-{{6 | power:4}}</h2>
+    <hr>
+    <p class="container text-center text-success">Employee Info</p>
+    <table class="table table-bordered p=4 w=50" align="center" cellspacing="6">
+        <tr>
+            <th>EmpName</th>
+            <th>EmpSalary</th>
+            <th>EmpGender</th>
+
+        </tr>
+        <tr *ngFor="let i of employee">
+            <td>{{i.name | genPipe:i.gender}}</td>
+            <td>{{i.sal}}</td>
+            <td>{{i.gender}}</td>
+        </tr>
+    </table>
+
+</div>
